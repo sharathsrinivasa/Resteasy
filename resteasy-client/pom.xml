@@ -11,22 +11,24 @@
 
     <artifactId>resteasy-client</artifactId>
     <name>RESTEasy JAX-RS Client</name>
+    <version>3.1.4.Final.PayPal.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
-            <version>${project.version}</version>
+            <version>3.1.4.Final</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs-services</artifactId>
-            <version>${project.version}</version>
+            <version>3.1.4.Final</version>
         </dependency>
         
         <dependency>
@@ -46,6 +48,18 @@
             <artifactId>httpclient</artifactId>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-dependencies</artifactId>
+                <version>3.1.4.Final</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
    <profiles>
         <profile>
